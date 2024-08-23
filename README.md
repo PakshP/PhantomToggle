@@ -1,6 +1,7 @@
 # PhantomToggle
 
 PhantomToggle is a simple Minecraft Spigot plugin that allows players to toggle the spawning of phantoms for themselves. This plugin is perfect for servers where players want to avoid phantoms without using beds.
+Text currently is set to VanillaFrogs. Join at `vanillafrogs.com` or `play.vanillafrogs.com`!
 
 ## Features
 
