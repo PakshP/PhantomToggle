@@ -2,16 +2,27 @@ package org.dotwow.phantomToggle;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class PhantomToggle extends JavaPlugin {
+public class PhantomToggle extends JavaPlugin {
+
+    private PhantomManager phantomManager;
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
+        // Initialize the PhantomManager
+        this.phantomManager = new PhantomManager(this);
 
+        // Register the command and event listener
+        this.getCommand("togglephantoms").setExecutor(new PhantomToggleCommand(phantomManager));
+        getServer().getPluginManager().registerEvents(new PhantomSpawnListener(phantomManager), this);
     }
 
     @Override
     public void onDisable() {
-        // Plugin shutdown logic
+        // Save player data when the plugin is disabled
+        phantomManager.savePlayerData();
+    }
+
+    public PhantomManager getPhantomManager() {
+        return phantomManager;
     }
 }
