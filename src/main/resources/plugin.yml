@@ -1,0 +1,6 @@
+name: PhantomToggle
+version: '1.0'
+main: org.dotwow.phantomToggle.PhantomToggle
+api-version: '1.21'
+authors: [ Paksh Patel ]
+description: A plugin that allows toggling phantoms per user.
