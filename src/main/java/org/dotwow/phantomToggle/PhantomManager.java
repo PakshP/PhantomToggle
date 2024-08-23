@@ -1,5 +1,6 @@
 package org.dotwow.phantomToggle;
 
+import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
@@ -58,12 +59,15 @@ public class PhantomManager {
     }
 
     public void togglePhantomSpawning(Player player) {
+
+        String prefix = ChatColor.DARK_GREEN + "" + ChatColor.BOLD + "Vanilla" + ChatColor.GREEN + "" + ChatColor.BOLD + "Frogs " + ChatColor.DARK_GRAY + "| ";
+
         if (phantomDisabledPlayers.contains(player.getUniqueId())) {
             phantomDisabledPlayers.remove(player.getUniqueId());
-            player.sendMessage("Phantom spawning enabled.");
+            player.sendMessage(prefix + ChatColor.WHITE + "Phantom spawning" + ChatColor.GREEN + " enabled.");
         } else {
             phantomDisabledPlayers.add(player.getUniqueId());
-            player.sendMessage("Phantom spawning disabled.");
+            player.sendMessage(prefix + ChatColor.WHITE + "Phantom spawning" + ChatColor.RED + " disabled.");
         }
         savePlayerData();
     }
