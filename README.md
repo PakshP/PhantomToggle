@@ -14,7 +14,7 @@ PhantomToggle is a simple Minecraft Spigot plugin that allows players to toggle 
 
 ## Installation
 
-1. **Download the Plugin:** Download the latest release from the [Releases](https://github.com/yourusername/PhantomToggle/releases) section.
+1. **Download the Plugin:** Download the latest release from the [Releases](https://github.com/PakshP/PhantomToggle/releases) section.
 2. **Place in Plugins Folder:** Place the `PhantomToggle.jar` file in your server's `plugins` directory.
 3. **Restart the Server:** Start or restart your Minecraft server. The plugin will be loaded automatically.
 4. **Enjoy:** Players can now use the `/togglephantoms` command to toggle phantom spawning for themselves.
