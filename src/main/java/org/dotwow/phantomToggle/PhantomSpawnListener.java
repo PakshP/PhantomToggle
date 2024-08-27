@@ -19,6 +19,7 @@ public class PhantomSpawnListener implements Listener {
         if (event.getTarget() instanceof Player && event.getEntity() instanceof Phantom) {
             Player player = (Player) event.getTarget();
             if (phantomManager.isPhantomSpawningDisabled(player)) {
+                event.getEntity().remove();
                 event.setCancelled(true);
             }
         }
